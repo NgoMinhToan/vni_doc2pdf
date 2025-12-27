@@ -1,12 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Word → PDF Converter</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
 
 <body>
-    <h2>Upload Word → PDF</h2>
-    <form action="/upload" method="post" enctype="multipart/form-data">
-        <input type="file" name="file" accept=".doc,.docx" required />
-        <button type="submit">Convert</button>
-    </form>
+    <div class="container">
+        <h1>Word → PDF</h1>
+        <p class="subtitle">Chuyển Word sang PDF không lỗi font</p>
+    
+        <div id="dropzone" class="dropzone">
+            <p>Kéo thả file .doc / .docx vào đây</p>
+            <input type="file" id="fileInput" accept=".doc,.docx" multiple hidden />
+            <button id="selectBtn">Chọn file</button>
+        </div>
+    
+        <button id="startBtn" class="start" disabled>
+            Bắt đầu chuyển
+        </button>
+        <ul id="fileList"></ul>
+    </div>
+    
+    <script src="app.js"></script>
 </body>
 
 </html>
